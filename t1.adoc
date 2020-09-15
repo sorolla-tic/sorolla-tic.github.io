@@ -1,0 +1,494 @@
+= Redes de computadores. Conceptos básicos
+////
+Comment
+////
+ Doc Writer<carlos.sanchez@iessorolla.es>
+:description: Programación con arduino.
+:library: Asciidoctor
+:toc:
+ifdef::asciidoctor[]
+:source-highlighter: coderay
+endif::asciidoctor[]
+:idprefix:
+//:stylesheet: asciidoc.css
+:imagesdir: img
+//:backend: docbook45
+//:backend: html5
+//:doctype: book
+//:sectids!:
+:bl: pass:[ +]
+:plus: &#43;
+
+
+== Introducción a las redes de computadores
+
+=== Conceptos básicos de las redes de comunicación
+Las personas siempre han tenido la necesidad de comunicarse e intercambiar información. pero la distancia y el tiempo han sido uno de los inconvenientes principales: las redes entre ordenadores han solucionado este contratiempo.
+
+Los ordenadores son máquinas especializadas en procesar información, pero no siempre la información se genera o se almacena en el lugar donde se procesa, y por tanto es necesario trasportar la información desde el origen hasta el destino, con lo que se crea una comunicación.
+
+==== Comunicación
+Se denomina canal de comunicación al recorrido físico que hay que establecer usando diversos medios de comunicación (cobre, fibra, etc.) para que la señal se pueda desplazar entre dos puntos.
+
+image::comunicacion1.jpg[Canal de comunicación,500,title='Comunicación']
+Los elementos que forman parte de una transmisión son:
+
+* Un emisor, donde se origina la información
+* Un receptor, donde se recibe la información
+* Una canal de comunicación por donde circula la señal
+
+NOTE: La comunicación es el proceso mediante el cual se transporta la información; esta información viaja en una señal que se transmite desde el emisor al receptor. El emisor y el receptor conocen el mismo código, por eso son capaces de interpretar las señales para obtener información.
+
+* *Emisor/Receptor* El emisor se encarga de proporcionar información, el receptor es quien la recibe. Hay comunicaciones en las que se intercambian el papel de emisor y receptor, por ejemplo una conversación telefónica.
+En toda comunicación hay un mínimo de un emisor y un receptor, pero pueden darse los siguientes casos.
+** Un emisor y varios receptores: Por ejemplo la radio o la televisión.
+** Varios emisores y un solo receptor: Por ejemplo una agencia de noticias.
+** Varios emisores y varios receptores: una red de ordenadores.
+
+
+* *Transductor*. Un transductor es un elemento capaz de transformar la naturaleza de la señal. La señal que más se utiliza en las telecomunicaciones es la señal eléctrica, por que es fácil y rápida de transportar y transformar. Son ejemplos de transductor un micrófono, un altavoz, un fax.
+
+
+video::zZ7ay-j6ZQQ[youtube,float='right',title='Fibra óptica, como funciona']
+* *Canal*. El canal es el elemento por donde se transporta la señal desde el emisor al receptor. Cada señal tiene su tipo de canal, las señales ópticas, la fibra, las señales eléctricas, el cobre y la señal inalámbrica, el aire.
+* *Codificación*. Para que la comunicación sea completa, tanto el emisor como el receptor deben utilizar el mismo código, por ejemplo el mismo lenguaje entre personas. El proceso de codificación y decodificación ha de ser compatible.
+
+
+[Actividades]
+.Actividades
+[start=1]
+. Piensa y describe casos de comunicación entre un emisor y varios receptores y varios emisores y varios receptores que se dan en tu día a día.
+. ¿Por cuál medio se desplaza nuestra voz cuando hablamos?
+. ¿Qué órgano hace de transductor tanto en la emisión como en la recepción cuando emitimos o recibimos un mensaje de voz?
+
+
+[Experimento]
+.Experimento
+[start=1]
+Comprueba mediante este sencillo experimento el fenómeno de reflexión total que permite que la luz viaje cientos de kilómetros por la fibra óptica.
+
+[.float-group]
+--
+[.left]
+image::http://webdelprofesor.ula.ve/ciencias/labdemfi/optica/fotos/fibra_optica_g.gif[fibra óptica,250]
+[.left]
+image::https://webs.ucm.es/info/expoptic/Experiencias/archivos_Tyndall/07_tindall.gif[fibra óptica,250]
+--
+
+
+== Componentes básicos de una red de ordenadores
+Una red de ordenadores local o LAN (_Local area network_) es la interconexión de diversos ordenadores y periféricos en un espacio reducido, desde tu propia casa, hasta un hosptital o un centro educativo, para compartir recursos e intercambiar información.
+
+Una red de área local esta formada por los siguientes elementos.
+
+* Hosts
+* Perífericos compartidos
+* Dispostivos de red
+* Medios de red
+* Protocolos y reglas
+
+
+*Hosts* envian y reciben el trafico del usuario. Es el nombre genéricos para los dispositivos del usuario final. Un host tiene una dirección *IP* que le permite estar accesible al resto de hosts. Los ordenadores, móviles, impresoras de red, Smart TV son algunos ejemplos.
+
+*Periféricos compartidos* Son los dispositivos que tienen presencia única pero que están disponibles al resto de hosts a través de la red. Impresoras, scanner, sistemas de gran almacenamiento.
+TIP: Pensad por un momento como sería la rutina en una oficina con 10 ordenadores y una única impresora sin que esta estuviera disponible en la red como recurso compartido.
+
+image::https://www.monografias.com/trabajos90/redes-interconexion/image002.png[switch,float='right',250,title='Dispositivos de red']
+*Dispostivios de red* Son los dispositivos que permiten la interconexión de varios hosts, principalmente conmutadores de red o _switches_ y encaminadores o _routers_.
+Los dispositivos de red  tambien se encargan de:
+
+* Regenerar y retransmitir la señal de datos
+* Dirigir el tráfico de información
+* Perminir o denegar el tráfico de información según unas reglas (cortafuegos o _firewall_)
+
+* *Servicios y protocolos* Las personas, generalmente buscan enviar y recibir diferentes tipos de mensajes a través de aplicaciones, navegar en la web, enviar un correo, enviar un mensaje por mensajería instantanea, ver o escuchar música on-line. Según el tipo de servicio que se requiera se la aplicación utilizara un protocolo u otro, he aquí los más populares.
+
+.Servicios y protocolos
+[cols=2*,options=header,width=75%]
+|===
+|Servicio
+|Protocolo(o reglas)
+
+
+|WWW (World Wide Web)
+|HTTP (Hypertex transport protocol)
+
+|E-mail
+|SMTP (Simple mail transport protocol)
+
+POP (Post office protocol)
+
+|Mensajería instantánea
+|XMPP
+
+|Streaming medial
+|RTSP (Real time streaming protocol)
+
+MPEWG-DASH (Dynamic Adaptive Streaming over HTTP)
+|===
+
+*Protocolo Ethernet*: Al igual que existe un código de circulación para que los vehículos circulen por las carreteras sin _accidentes_, existe un código de circulación, también denominado protocolo para que los paquetes en los cuales viaja la información viajen por la red y llegen a su destino. El protocolo más extendido en redes de área local es el denominado *Ehernet*
+
+
+
+== Interconexión de redes
+=== Direccionamiento físico y ĺógico en la red
+
+Para poder conectar un ordenador a una red, es necesario que este dispositivo disponga de una interfaz de red, la cual se identifica con la MAC que es única para cada tarjeta de red existente en el mundo.
+
+image::https://cdn.blogsdna.com/wp-content/uploads/2018/12/MAC-Media-Access-Control-Address-Format.jpg[mac,500]
+
+TIP: La MAC es única en el mundo, un organismo regulador ha asignado a cada empresa fabricante un rango de MAC para sus productos.
+
+
+*Protocolo ARP* El protocolo ARP se encarga de relacionar una dirección IP con una MAC o dirección física, ya que necesita esta última para comunicarse en la rede de área local.
+La máquina que quiere saber la dirección MAC que tiene una cierta IP envía un paquete de tipo petición ARP (ARP request) a la dirección de multidifusión (FF:FF:FF:FF:FF:FF) y espera que la máquina que tiene la IP correspondiente le responda mediatne un (ARP response)
+TIP: Piensa cuando el profesor pasa lista por primera vez pues no conocer a los alumnos. Él tiene una lista de nombres que podrían ser dirección IP y para saber que nombre se corresponde con cada alumno, lo que hace es enviar un mensaje (nombrar al alumno en alto, seria ARP Request) de multidifusión (a toda la clase) y esperar a que el alumno con ese nombre levante la mano (ARP Response). El profesor asocia un nombre con una cara y así poder dirigirse al alumno con su nombre la próxima vez.
+
+
+[Actividades]
+.Actividades
+[start=1]
+. Utiliza el comando `ifconfig` en la terminal para conocer la MAC de tu equipo. Introduce la MAC en esta https://macvendors.com/[web] para obtener el fabricante.
+. ¿Cual es la MAC de tu móvil, y el fabricante?
+. Utiliza en la terminal el comando `arp -a`  para ver con que dispositivos has establecido conexión en las últimas horas.
+. Utiliza en la terminal el comando `ping _ip_` para testear la comunicación con otros hosts dentro de la misma subred.
+	.. ¿Qué le ocurre a la cache de macs accedidas recientemente?
+	.. ¿Cuál es la MAC del host 10.1.0.254?
+	.. ¿Cuál es la MAC del host 10.0.1.120?, ¿Cómo lo has sabido?
+
+
+.Actividad refuerzo
+****
+*Objetivos*
+
+* Comprender el funcionamiento del protocolo arp de aprendizaje de direcciones físicas(MAC) y el aprendizaje de
+la tabla de direcciones MAC en un switch a través de un juego.
+
+*Material*
+
+* Folios de color rojo para mensajes ARP Request
+* Folios de color verde para mensajes ARP Response
+* Folios de color blanco para las tablas MAC tanto de los hosts como del switch
+
+.Formato ARP Request (folio verde)
+[cols=2*,options=header,width=75%]
+|===
+|Source
+|Destination
+
+|SRC_IP
+| >> DST_IP
+
+|SRC_MAC
+| >> DST_MAC
+|===
+
+.Formato ARP Response (folio rojo)
+[cols=2*,options=header,width=75%]
+|===
+|Source
+|Destination
+
+|SRC_IP
+| >> DST_IP
+
+|SRC_MAC
+| >> DST_MAC
+|===
+
+.Formato Mensaje de texto (folio azul)
+[cols=2*,options=header,width=75%]
+|===
+|Source
+|Destination
+
+|SRC_IP
+| >> DST_IP
+
+|SRC_MAC
+| >> DST_MAC
+
+2+^.^|Mensaje de texto
+|===
+
+.Formato cache arp host
+[cols=2*,options=header,width=75%]
+|===
+|IP
+|MAC
+
+|...
+|...
+
+|===
+
+.Formato cache mac switch
+[cols=2*,options=header,width=75%]
+|===
+|MAC
+|PORT
+
+|...
+|...
+
+|===
+****
+
+=== Direccionamiento lógico.
+La dirección IP es la responsable de que nuestra máquina pueda ser encontrada en la red. Esta dirección es única para cada ordenador dentro de la subred, en caso contrario entrarían en conflicto y ninguna de ellas podría recibir información.
+NOTE: La dirección IP esta formada por 32 bits en grupos de 8 bits.
+
+.Dirección IP en binario y decimal
+[cols=2*,options=header,width=75%]
+|===
+|Direccionamiento IP en notación decimal
+|Direccionamiento IP en notación binaria
+
+|192.168.34.6
+|11000000.10101000.00100010.00000110
+|===
+
+NOTE: El valor máximo en decimal que puede tener cada octeto es de 255, equivalente en binario a 11111111
+
+
+==== Clases de dirección IPv4
+
+image::http://redestelematicas.com/wp-content/uploads/2012/12/9.5.-Jerarquia-IPv4-1024x227.jpg['mask',400,float='right',title='Máscara de red']
+La dirección IP es un número de 32 bits que identifica cada una de las máquinas que están conectadas a Internet o a cualquier red y también a la red a la que están conectadas. Una parte de la dirección IP según su máscara de red sirve para identificar la red, siendo el resto la dirección IP que identifica la máquina.
+
+Para poder separa el campo que identifica a la red del campo que identifica al host, se tiene que aplicar la máscara de red, es decir aplicar la operación lógica AND entra la máscara de red y la dirección IP.
+
+ 192.168.2.23 = 11000000.10101000.00000010.00010111
+
+La máscara de red es mucho más sencillo pues siempre será un conjunto de unos al principio que en algún punto cambiarán a cero.
+
+ 255.255.0.0  = 11111111.11111111.00000000.00000000
+
+
+image::https://interpolados.files.wordpress.com/2017/03/44.png?w=825[mask-and,500,title="Operación AND en dirección IP"]
+
+NOTE: Una operación lógica AND da como resultado 1 si ambos operandos son 1, 0 en cualquier otro caso.
+
+
+
+.Valores posibles para la máscara de red
+[cols=2*,options=header,width=75%]
+|===
+|Valor en decimal
+|Valor en binario
+
+|255
+|11111111
+
+|254
+|11111110
+
+|252
+|11111100
+
+|248
+|11111000
+
+|240
+|11110000
+
+|224
+|11100000
+
+|192
+|11000000
+
+|128
+|10000000
+
+|0
+|00000000
+
+
+|===
+
+
+[Actividades]
+.Actividades
+[start=1]
+. ¿Cuántos bits tiene una dirección IPv4?
+. ¿De cuantos bits está compuesta la máscara de red?
+. ¿Cuál es la dirección IP en binario de la siguiente en decimal 172.28.22.1?
+. A partir de la siguiente dirección ip 10.0.2.45 y con máscara de red 255.255.0.0
+	.. ¿Cuál es la dirección de red?
+	.. ¿Cuál es el identificador del host?
+. Realiza el ejercicio anterior con la siguiente máscara 255.255.255.0
+. ¿Cuantos hosts pueden existir en una red cuya máscara es 255.255.255.0?, ¿y 255.255.0.0?
+. Dada la siguiente red 192.168.2.70 y la máscara 255.255.255.0, determina la dirección de red y el identificador de host. Asigna 10 ip's válidas a diez supuestos hosts.
+. Repite el ejercicio anterior pero con siguiente máscara de red 255.255.0.0
+
+.Actividad refuerzo
+****
+*Objetivos*
+
+* Reforzar el conocimiento y uso práctico de las máscaras de red aplicándolo a un uso cotidiano
+*Desarrollo*
+Imagina que las aulas del IES tienen un número mediante el cual podemos saber su ubicación y su máximo número de alumnos, el formato es el siguiente:
+
+.Codificación aulas IES
+|===
+|Edificio | Planta | Capacidad alumnos
+
+| 2 bits
+| 2 bits
+| 6 bits
+|===
+
+A partir del formato de aulas y el siguiente valor 0110010100
+
+. ¿Cuál es el número máximo permitido para dicha aula?
+. ¿En que planta y edificio está ubicada?
+. ¿Que máscara utilizaríamos para conocer la capacidad del aula?
+. Según el código, ¿cuál es el número máximo de plantas que podríamos tener? ,¿y de alumnos?
+****
+
+== Prácticas
+Las siguientes prácticas las llevaremos a cabo utilizando el simulador de red _PacketTracer_ que podéis descargar  https://www.netacad.com/portal/sites/default/files/resources/PacketTracer/packet_tracer_7.2.1_for_linux_64_bit.tar.gz[aquí]
+ realiza las siguientes actividades.
+Podéis seguir los pasos de instalación en este https://linuxhint.com/install_packet_tracer_ubuntu_1804/[tutorial].
+
+=== Práctica 1. Conexión directa entre dos hosts
+****
+
+*Objetivo*
+
+* Interconectar los hosts de forma directa con un cable cruzado.
+
+*Desarrollo*
+
+. Dibuja y conecta dos hosts de forma directa.
+. Asigna ip's válidas para dos hosts dentro de la red 192.168.10.0/24
+. Utilizando el comando ping comprueba la conectividad
+. Comprueba la cache arp de ambos hosts
+
+
+image::xxxxxxxxxxxxxx
+****
+
+=== Práctica 2. Conexión a través de un switch
+****
+
+*Objetivo*
+
+* Interconectar los hosts entre sí mediante un switch
+
+*Desarrollo*
+
+. Dibuja y conecta 5 hosts a un switch.
+. Asigna ip's válidas para los hosts dentro de la red 192.168.10.0/24
+. Utilizando el comando ping comprueba la conectividad
+. Asigna a un host una ip no valida (de otra subred) y comprueba la conectividad
+
+image::
+
+****
+
+=== Práctica 3. interconexion de dos switch
+Supongamos, queremos interconectar dos aulas de 5 ordenadores cada una, entre estas hay una distancia de 30 metros, para ello utilizaremos dos switches, un por cada aula y luego los interconectaremos entre si.
+
+****
+*Objetivo*
+
+* Interconectar dos switches
+
+*Desarrollo*
+
+. Dibuja y conecta 5 hosts a un switch correspondiente al aula 1
+. Dibuja y conecta 5 hosts a un switch correspondiente al aula 2
+. Interconecta los dos switches.
+. Asigna ip's válidas a los host dentro de la red 10.2.0.0/255.255.255.0
+
+****
+
+=== Práctica 4. Subredes y routers
+Imaginemos que nos han encomendado realizar la configuración de red de un edificio con varias plantas, dos para simplificar, cada planta puede tener hasta un máximo de 255 ordenadores conectados. Para una mejor organización lógica y resolver posibles problemas en un futuro de forma eficiente. Vamos a hacer que cada planta este en una subred:
+
+[width=75%]
+|===
+|Planta |Identificador de red
+
+|Planta 1
+|192.168.10.0/24
+
+|Planta 2
+|192.168.20.0/24
+
+|===
+
+Completa la siguiente tabla con valores válidos para los siguientes hosts. Al Router por cuestiones prácticas se le suele asignar la primera ip de la subred.
+
+[width=75%]
+|===
+|Nombre Host |ip
+
+|PC101
+|..
+
+|PC102
+|..
+
+|PC103
+|..
+
+|PC104
+|..
+
+|PC105
+|..
+
+|PC201
+|..
+
+|PC202
+|..
+
+|PC203
+|..
+
+|PC204
+|..
+
+|PC205
+|..
+
+|ROUTER g/0/0
+|..
+
+|ROUTER g/0/1
+|..
+
+|===
+
+Es necesario el uso del router, ya que tenemos dos redes, la de la planta 1 y la de la planta 2 por lo que necesitamos un elemento de interconexión de redes, un router, que establezca las rutas entre estas dos redes diferentes.
+
+****
+*Objetivo*
+
+* Interconectar dos redes mediante un routers
+
+*Desarrollo*
+
+. Dibuja y conecta 5 hosts al switch de la planta 1
+. Dibuja y conecta 5 hosts al switch de la planta 2
+. Asigna la ip a las interfaces del rotuter segun la tabla
+. Asigna ip's válidas a los host segun la tabla completada asignando como puerta de enlace la correspondiente del router.
+. Comprueba la interconectividad entre los diferentes hosts.
+
+
+*Questiones*
+
+. ¿Por qué es necesario el uso del router para que los ordenadores de la planta 1 puedan comunicarse con los de la planta 2?
+. ¿Por qué es necesario configurar los hosts con la puerta de enlace?.
+. ¿Que ocurriría si configuramos los hosts con una puerta de enlace errónea o la dejamos sin configurar?
+. En el caso anterior, es decir, hemos configurado o dejado sin configurar el campo puerta de enlace en los hosts:
+	.. ¿Podríamos comunicarnos con los ordenadores de la misma red?
+	.. ¿Podríamos comunicarnos con los ordenadores de diferente red?.
+	.. Razona tu respuesta en ambos casos
+. ¿Para que sirve el campo puerta de enlace?
+****
