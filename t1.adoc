@@ -16,6 +16,7 @@ endif::asciidoctor[]
 //:backend: html5
 //:doctype: book
 //:sectids!:
+:sectnums:
 :bl: pass:[ +]
 :plus: &#43;
 
@@ -130,6 +131,70 @@ MPEWG-DASH (Dynamic Adaptive Streaming over HTTP)
 *Protocolo Ethernet*: Al igual que existe un código de circulación para que los vehículos circulen por las carreteras sin _accidentes_, existe un código de circulación, también denominado protocolo para que los paquetes en los cuales viaja la información viajen por la red y llegen a su destino. El protocolo más extendido en redes de área local es el denominado *Ethernet*
 
 
+== Clasificación de las redes
+
+Las redes de computadres se crean para interconectar ordenadores. Podemas clasificar a estas en función de:
+
+. Extensión geográfica
+. Cliente/servidor o de iguales
+. Topología física
+
+=== Extensión geográfica
+. Redes de área local (LAN)
+. Redes de área metropolitana(MAN)
+. Redes de área extensa(WAN)
+
+==== Redes de área local (LAN)
+Las LAN están diseñadas para conectar todos los dispositivos, impresoras, servidores, clientes, cámaras, etc. dentro de un edificio. Las tenemos en nuestra casa, lugar de trabajo, biblioteca, instituto, etc.
+
+=== Redes de área metropolitana(MAN)
+Creadas a partir de la necesidad de conectar diferentes edificios de una empresa/entidad académica/institución pública dentro de una misma ciudad
+
+=== Redes de área exensa(WAN)
+Las redes de área extensa normalmente utilizan lineas de trasnmisión en muchos casos propiedad de compañías telefónicas. Estás líneas son compartidas por muchos usuarios. Estás abarcan paises y continentes.
+
+== Cliente/servidor o de iguales
+Una red cliente-servidor es aquell en el que todos los clientes están conectados a un servidor donde se centralizan todos los recursos (servidor web,servidor de correo electónico, servidor de streaming, servidor de mensajería instantánea,etc.)
+Una red entre iguales es aquella en el que todos los integrantes de la rea actuán solicitando y atendiendo peticiones (redes p2p). Son redes sencillas de llevar a cabo que conectan un número limitado de máquinas. Su escalabilidad es limitada.
+
+== Topología
+
+Una red sencilla formada por un número reducido de ordenadores, es sencilla de visualizar. A medida que esta crece es necesario crear un mapa topológico donde registramos la ubicación de cada ordenador y como está contectado a la red.
+El mapa de topología física tambien muestra por donde pasan los cables y las ubicaciones de los dispositivos de red que conectan los ordenadores. Estos mapas son muy importantes a la hora de detectar y solucionar problemas.
+Tambien es interesante tener una representación lógica de la red, donde lo más importante no es la ubicación física, sino los nombres de estos y direcciones ip.
+
+
+[.float-group]
+--
+[.left]
+.Image A
+image::http://1.bp.blogspot.com/_jGWcwWrCUPY/St_e5JOnqEI/AAAAAAAADvA/6N_MlDoJBJo/s1600/topologiafisica.gif[Topología física,500,title="Topología física"]
+
+[.left]
+.Image B
+image::https://1.bp.blogspot.com/-WCDrM1dU43A/WEDqi87mb7I/AAAAAAAAdK8/sFJV4VF_OwsBQz4qSSXMDRUpXFwfpUdzgCLcB/s1600/2.PNG[Topología lógica,380,title="Topología lógica"]
+--
+
+
+
+
+*Redes en anillo*: Aquellas en que los nodos formán una anillo. Disponen de una entrada y una salida, los conectores son de tipo T
+
+image::https://i2.wp.com/s.culturacion.com/wp-content/uploads/2014/11/figura-2.png[Token ring,200,title='Red en anillo']
+
+*Red en bus*: Los nodos están conectados a un medio de comunicación común, la información puede ser vista por todos los nodos que comparten el medio. Un ejemplo de es red es la red inalámbrica.
+
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Topologia_magistrali.svg/200px-Topologia_magistrali.svg.png[Token Bus,200,title="Red en bus"]
+
+
+*Red en estrella*: Utiliza un elemento central para interconectar a todos los nodos
+
+image::https://www.lifeder.com/wp-content/uploads/2019/10/Topolog%C3%ADa-en-estrella-Umapathy-CC-BY-SA-3.0-httpscreativecommons.orglicensesby-sa3.0.jpg[Estrella,200,title="Red en estrella"]
+
+*Red jerárquica/mixta*: Es una extensión de las anteriores, puede utilizar combinaciones de estas.
+
+image::https://sites.google.com/site/smrtecnoredes/_/rsrc/1448653934338/topologia-arbol-jerarquica/arbol-massandra.jpg?height=246&width=400[Jerárquica,200,title="Red jerárquica"]
+
 
 == Interconexión de redes
 === Direccionamiento físico y ĺógico en la red
@@ -141,7 +206,7 @@ image::https://cdn.blogsdna.com/wp-content/uploads/2018/12/MAC-Media-Access-Cont
 TIP: La MAC es única en el mundo, un organismo regulador ha asignado a cada empresa fabricante un rango de MAC para sus productos.
 
 
-*Protocolo ARP* El protocolo ARP se encarga de relacionar una dirección IP con una MAC o dirección física, ya que necesita esta última para comunicarse en la rede de área local.
+*Protocolo ARP* El protocolo ARP se encarga de relacionar una dirección IP con una MAC o dirección física, ya que necesita esta última para comunicarse en la red de área local.
 La máquina que quiere saber la dirección MAC que tiene una cierta IP envía un paquete de tipo petición ARP (ARP request) a la dirección de multidifusión (FF:FF:FF:FF:FF:FF) y espera que la máquina que tiene la IP correspondiente le responda mediatne un (ARP response)
 TIP: Piensa cuando el profesor pasa lista por primera vez pues no conocer a los alumnos. Él tiene una lista de nombres que podrían ser dirección IP y para saber que nombre se corresponde con cada alumno, lo que hace es enviar un mensaje (nombrar al alumno en alto, seria ARP Request) de multidifusión (a toda la clase) y esperar a que el alumno con ese nombre levante la mano (ARP Response). El profesor asocia un nombre con una cara y así poder dirigirse al alumno con su nombre la próxima vez.
 
