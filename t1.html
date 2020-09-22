@@ -1,10 +1,16 @@
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Redes de computadores. Conceptos básicos</title>
-      <style>
-        #wrapper {width: 960px; margin: 0 auto;}
-        /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="description" content="Programación con arduino.">
+<meta name="author" content="Doc Writer&lt;carlos.sanchez@iessorolla.es&gt;">
+<title>Redes de computadores. Conceptos básicos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
 /* Uncomment @import statement to use as custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
@@ -236,7 +242,7 @@ table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;pad
 pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
 pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
 .quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
 .quoteblock blockquote{margin:0;padding:0;border:0}
 .quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
@@ -253,7 +259,8 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
 .quoteblock.abstract{margin:0 1em 1.25em;display:block}
 .quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
-.quoteblock.excerpt,.quoteblock .quoteblock{margin:0 0 1.25em;padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
 table.tableblock{max-width:100%;border-collapse:separate}
@@ -429,77 +436,93 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer{background:none}
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
-
-      </style>
-      <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/asciidoc.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/dockerfile.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/makefile.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/rust.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/haskell.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/typescript.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scss.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/less.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/handlebars.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/groovy.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scala.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/ini.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
-    </head>
-    <body>
-      <div id="wrapper">
-        <div class="article">
-          <h1 id="__asciidoctor-preview-0__">Redes de computadores. Conceptos básicos</h1>
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Redes de computadores. Conceptos básicos</h1>
+<div class="details">
+<span id="author" class="author">Doc Writer&lt;carlos.sanchez@iessorolla.es&gt;</span><br>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#introducción_a_las_redes_de_computadores">1. Introducción a las redes de computadores</a>
+<ul class="sectlevel2">
+<li><a href="#conceptos_básicos_de_las_redes_de_comunicación">1.1. Conceptos básicos de las redes de comunicación</a></li>
+</ul>
+</li>
+<li><a href="#componentes_básicos_de_una_red_de_ordenadores">2. Componentes básicos de una red de ordenadores</a></li>
+<li><a href="#clasificación_de_las_redes">3. Clasificación de las redes</a>
+<ul class="sectlevel2">
+<li><a href="#extensión_geográfica">3.1. Extensión geográfica</a></li>
+<li><a href="#redes_de_área_metropolitanaman">3.2. Redes de área metropolitana(MAN)</a></li>
+<li><a href="#redes_de_área_exensawan">3.3. Redes de área exensa(WAN)</a></li>
+</ul>
+</li>
+<li><a href="#clienteservidor_o_de_iguales">4. Cliente/servidor o de iguales</a></li>
+<li><a href="#topología">5. Topología</a></li>
+<li><a href="#interconexión_de_redes">6. Interconexión de redes</a>
+<ul class="sectlevel2">
+<li><a href="#direccionamiento_físico_y_ĺógico_en_la_red">6.1. Direccionamiento físico y ĺógico en la red</a></li>
+<li><a href="#direccionamiento_lógico">6.2. Direccionamiento lógico.</a></li>
+</ul>
+</li>
+<li><a href="#prácticas">7. Prácticas</a>
+<ul class="sectlevel2">
+<li><a href="#práctica_1_conexión_directa_entre_dos_hosts">7.1. Práctica 1. Conexión directa entre dos hosts</a></li>
+<li><a href="#práctica_2_conexión_a_través_de_un_switch">7.2. Práctica 2. Conexión a través de un switch</a></li>
+<li><a href="#práctica_3_interconexion_de_dos_switch">7.3. Práctica 3. interconexion de dos switch</a></li>
+<li><a href="#práctica_4_subredes_y_routers">7.4. Práctica 4. Subredes y routers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
 <div class="sect1">
-<h2 id="introducción_a_las_redes_de_computadores">Introducción a las redes de computadores</h2>
+<h2 id="introducción_a_las_redes_de_computadores">1. Introducción a las redes de computadores</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="conceptos_básicos_de_las_redes_de_comunicación">Conceptos básicos de las redes de comunicación</h3>
-<div id="__asciidoctor-preview-1__" class="paragraph">
+<h3 id="conceptos_básicos_de_las_redes_de_comunicación">1.1. Conceptos básicos de las redes de comunicación</h3>
+<div class="paragraph">
 <p>Las personas siempre han tenido la necesidad de comunicarse e intercambiar información. pero la distancia y el tiempo han sido uno de los inconvenientes principales: las redes entre ordenadores han solucionado este contratiempo.</p>
 </div>
-<div id="__asciidoctor-preview-2__" class="paragraph">
+<div class="paragraph">
 <p>Los ordenadores son máquinas especializadas en procesar información, pero no siempre la información se genera o se almacena en el lugar donde se procesa, y por tanto es necesario trasportar la información desde el origen hasta el destino, con lo que se crea una comunicación.</p>
 </div>
 <div class="sect3">
-<h4 id="comunicación">Comunicación</h4>
-<div id="__asciidoctor-preview-3__" class="paragraph">
+<h4 id="comunicación">1.1.1. Comunicación</h4>
+<div class="paragraph">
 <p>Se denomina canal de comunicación al recorrido físico que hay que establecer usando diversos medios de comunicación (cobre, fibra, etc.) para que la señal se pueda desplazar entre dos puntos.</p>
 </div>
-<div id="__asciidoctor-preview-4__" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="img/comunicacion1.jpg" alt="Canal de comunicación" width="500">
 </div>
 <div class="title">Figure 1. Comunicación</div>
 </div>
-<div id="__asciidoctor-preview-5__" class="paragraph">
+<div class="paragraph">
 <p>Los elementos que forman parte de una transmisión son:</p>
 </div>
-<div id="__asciidoctor-preview-6__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-7__">
+<li>
 <p>Un emisor, donde se origina la información</p>
 </li>
-<li id="__asciidoctor-preview-8__">
+<li>
 <p>Un receptor, donde se recibe la información</p>
 </li>
-<li id="__asciidoctor-preview-9__">
+<li>
 <p>Una canal de comunicación por donde circula la señal</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-10__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 La comunicación es el proceso mediante el cual se transporta la información; esta información viaja en una señal que se transmite desde el emisor al receptor. El emisor y el receptor conocen el mismo código, por eso son capaces de interpretar las señales para obtener información.
@@ -507,72 +530,72 @@ La comunicación es el proceso mediante el cual se transporta la información; e
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-11__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-12__">
+<li>
 <p><strong>Emisor/Receptor</strong> El emisor se encarga de proporcionar información, el receptor es quien la recibe. Hay comunicaciones en las que se intercambian el papel de emisor y receptor, por ejemplo una conversación telefónica.
 En toda comunicación hay un mínimo de un emisor y un receptor, pero pueden darse los siguientes casos.</p>
-<div id="__asciidoctor-preview-13__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-14__">
+<li>
 <p>Un emisor y varios receptores: Por ejemplo la radio o la televisión.</p>
 </li>
-<li id="__asciidoctor-preview-15__">
+<li>
 <p>Varios emisores y un solo receptor: Por ejemplo una agencia de noticias.</p>
 </li>
-<li id="__asciidoctor-preview-16__">
+<li>
 <p>Varios emisores y varios receptores: una red de ordenadores.</p>
 </li>
 </ul>
 </div>
 </li>
-<li id="__asciidoctor-preview-17__">
+<li>
 <p><strong>Transductor</strong>. Un transductor es un elemento capaz de transformar la naturaleza de la señal. La señal que más se utiliza en las telecomunicaciones es la señal eléctrica, por que es fácil y rápida de transportar y transformar. Son ejemplos de transductor un micrófono, un altavoz, un fax.</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-18__" class="videoblock right">
+<div class="videoblock right">
 <div class="title">Fibra óptica, como funciona</div>
 <div class="content">
 <iframe src="https://www.youtube.com/embed/zZ7ay-j6ZQQ?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
-<div id="__asciidoctor-preview-19__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-20__">
+<li>
 <p><strong>Canal</strong>. El canal es el elemento por donde se transporta la señal desde el emisor al receptor. Cada señal tiene su tipo de canal, las señales ópticas, la fibra, las señales eléctricas, el cobre y la señal inalámbrica, el aire.</p>
 </li>
-<li id="__asciidoctor-preview-21__">
+<li>
 <p><strong>Codificación</strong>. Para que la comunicación sea completa, tanto el emisor como el receptor deben utilizar el mismo código, por ejemplo el mismo lenguaje entre personas. El proceso de codificación y decodificación ha de ser compatible.</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-22__" class="olist Actividades">
+<div class="olist Actividades">
 <div class="title">Actividades</div>
 <ol class="Actividades" start="1">
-<li id="__asciidoctor-preview-23__">
+<li>
 <p>Piensa y describe casos de comunicación entre un emisor y varios receptores y varios emisores y varios receptores que se dan en tu día a día.</p>
 </li>
-<li id="__asciidoctor-preview-24__">
+<li>
 <p>¿Por cuál medio se desplaza nuestra voz cuando hablamos?</p>
 </li>
-<li id="__asciidoctor-preview-25__">
+<li>
 <p>¿Qué órgano hace de transductor tanto en la emisión como en la recepción cuando emitimos o recibimos un mensaje de voz?</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-26__" class="paragraph">
+<div class="paragraph">
 <div class="title">Experimento</div>
 <p>Comprueba mediante este sencillo experimento el fenómeno de reflexión total que permite que la luz viaje cientos de kilómetros por la fibra óptica.</p>
 </div>
-<div id="__asciidoctor-preview-27__" class="openblock float-group">
+<div class="openblock float-group">
 <div class="content">
-<div id="__asciidoctor-preview-28__" class="imageblock left">
+<div class="imageblock left">
 <div class="content">
 <img src="http://webdelprofesor.ula.ve/ciencias/labdemfi/optica/fotos/fibra_optica_g.gif" alt="fibra óptica" width="250">
 </div>
 </div>
-<div id="__asciidoctor-preview-29__" class="imageblock left">
+<div class="imageblock left">
 <div class="content">
 <img src="https://webs.ucm.es/info/expoptic/Experiencias/archivos_Tyndall/07_tindall.gif" alt="fibra óptica" width="250">
 </div>
@@ -584,67 +607,67 @@ En toda comunicación hay un mínimo de un emisor y un receptor, pero pueden dar
 </div>
 </div>
 <div class="sect1">
-<h2 id="componentes_básicos_de_una_red_de_ordenadores">Componentes básicos de una red de ordenadores</h2>
+<h2 id="componentes_básicos_de_una_red_de_ordenadores">2. Componentes básicos de una red de ordenadores</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-30__" class="paragraph">
+<div class="paragraph">
 <p>Una red de ordenadores local o LAN (<em>Local area network</em>) es la interconexión de diversos ordenadores y periféricos en un espacio reducido, desde tu propia casa, hasta un hosptital o un centro educativo, para compartir recursos e intercambiar información.</p>
 </div>
-<div id="__asciidoctor-preview-31__" class="paragraph">
+<div class="paragraph">
 <p>Una red de área local esta formada por los siguientes elementos.</p>
 </div>
-<div id="__asciidoctor-preview-32__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-33__">
+<li>
 <p>Hosts</p>
 </li>
-<li id="__asciidoctor-preview-34__">
+<li>
 <p>Perífericos compartidos</p>
 </li>
-<li id="__asciidoctor-preview-35__">
+<li>
 <p>Dispostivos de red</p>
 </li>
-<li id="__asciidoctor-preview-36__">
+<li>
 <p>Medios de red</p>
 </li>
-<li id="__asciidoctor-preview-37__">
+<li>
 <p>Protocolos y reglas</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-38__" class="paragraph">
+<div class="paragraph">
 <p><strong>Hosts</strong> envian y reciben el trafico del usuario. Es el nombre genéricos para los dispositivos del usuario final. Un host tiene una dirección <strong>IP</strong> que le permite estar accesible al resto de hosts. Los ordenadores, móviles, impresoras de red, Smart TV son algunos ejemplos.</p>
 </div>
-<div id="__asciidoctor-preview-39__" class="paragraph">
+<div class="paragraph">
 <p><strong>Periféricos compartidos</strong> Son los dispositivos que tienen presencia única pero que están disponibles al resto de hosts a través de la red. Impresoras, scanner, sistemas de gran almacenamiento.
 TIP: Pensad por un momento como sería la rutina en una oficina con 10 ordenadores y una única impresora sin que esta estuviera disponible en la red como recurso compartido.</p>
 </div>
-<div id="__asciidoctor-preview-40__" class="imageblock right">
+<div class="imageblock right">
 <div class="content">
 <img src="https://www.monografias.com/trabajos90/redes-interconexion/image002.png" alt="switch" height="250">
 </div>
 <div class="title">Figure 2. Dispositivos de red</div>
 </div>
-<div id="__asciidoctor-preview-41__" class="paragraph">
+<div class="paragraph">
 <p><strong>Dispostivios de red</strong> Son los dispositivos que permiten la interconexión de varios hosts, principalmente conmutadores de red o <em>switches</em> y encaminadores o <em>routers</em>.
 Los dispositivos de red  tambien se encargan de:</p>
 </div>
-<div id="__asciidoctor-preview-42__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-43__">
+<li>
 <p>Regenerar y retransmitir la señal de datos</p>
 </li>
-<li id="__asciidoctor-preview-44__">
+<li>
 <p>Dirigir el tráfico de información</p>
 </li>
-<li id="__asciidoctor-preview-45__">
+<li>
 <p>Perminir o denegar el tráfico de información según unas reglas (cortafuegos o <em>firewall</em>)</p>
 </li>
-<li id="__asciidoctor-preview-46__">
+<li>
 <p><strong>Servicios y protocolos</strong> Las personas, generalmente buscan enviar y recibir diferentes tipos de mensajes a través de aplicaciones, navegar en la web, enviar un correo, enviar un mensaje por mensajería instantanea, ver o escuchar música on-line. Según el tipo de servicio que se requiera se la aplicación utilizara un protocolo u otro, he aquí los más populares.</p>
 </li>
 </ul>
 </div>
-<table id="__asciidoctor-preview-47__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 1. Servicios y protocolos</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -677,29 +700,155 @@ Los dispositivos de red  tambien se encargan de:</p>
 </tr>
 </tbody>
 </table>
-<div id="__asciidoctor-preview-58__" class="paragraph">
-<p><strong>Protocolo Ethernet</strong>: Al igual que existe un código de circulación para que los vehículos circulen por las carreteras sin <em>accidentes</em>, existe un código de circulación, también denominado protocolo para que los paquetes en los cuales viaja la información viajen por la red y llegen a su destino. El protocolo más extendido en redes de área local es el denominado <strong>Ehernet</strong></p>
+<div class="paragraph">
+<p><strong>Protocolo Ethernet</strong>: Al igual que existe un código de circulación para que los vehículos circulen por las carreteras sin <em>accidentes</em>, existe un código de circulación, también denominado protocolo para que los paquetes en los cuales viaja la información viajen por la red y llegen a su destino. El protocolo más extendido en redes de área local es el denominado <strong>Ethernet</strong></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="interconexión_de_redes">Interconexión de redes</h2>
+<h2 id="clasificación_de_las_redes">3. Clasificación de las redes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Las redes de computadres se crean para interconectar ordenadores. Podemas clasificar a estas en función de:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Extensión geográfica</p>
+</li>
+<li>
+<p>Cliente/servidor o de iguales</p>
+</li>
+<li>
+<p>Topología física</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="extensión_geográfica">3.1. Extensión geográfica</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Redes de área local (LAN)</p>
+</li>
+<li>
+<p>Redes de área metropolitana(MAN)</p>
+</li>
+<li>
+<p>Redes de área extensa(WAN)</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="redes_de_área_local_lan">3.1.1. Redes de área local (LAN)</h4>
+<div class="paragraph">
+<p>Las LAN están diseñadas para conectar todos los dispositivos, impresoras, servidores, clientes, cámaras, etc. dentro de un edificio. Las tenemos en nuestra casa, lugar de trabajo, biblioteca, instituto, etc.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redes_de_área_metropolitanaman">3.2. Redes de área metropolitana(MAN)</h3>
+<div class="paragraph">
+<p>Creadas a partir de la necesidad de conectar diferentes edificios de una empresa/entidad académica/institución pública dentro de una misma ciudad</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redes_de_área_exensawan">3.3. Redes de área exensa(WAN)</h3>
+<div class="paragraph">
+<p>Las redes de área extensa normalmente utilizan lineas de trasnmisión en muchos casos propiedad de compañías telefónicas. Estás líneas son compartidas por muchos usuarios. Estás abarcan paises y continentes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="clienteservidor_o_de_iguales">4. Cliente/servidor o de iguales</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Una red cliente-servidor es aquell en el que todos los clientes están conectados a un servidor donde se centralizan todos los recursos (servidor web,servidor de correo electónico, servidor de streaming, servidor de mensajería instantánea,etc.)
+Una red entre iguales es aquella en el que todos los integrantes de la rea actuán solicitando y atendiendo peticiones (redes p2p). Son redes sencillas de llevar a cabo que conectan un número limitado de máquinas. Su escalabilidad es limitada.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="topología">5. Topología</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Una red sencilla formada por un número reducido de ordenadores, es sencilla de visualizar. A medida que esta crece es necesario crear un mapa topológico donde registramos la ubicación de cada ordenador y como está contectado a la red.
+El mapa de topología física tambien muestra por donde pasan los cables y las ubicaciones de los dispositivos de red que conectan los ordenadores. Estos mapas son muy importantes a la hora de detectar y solucionar problemas.
+Tambien es interesante tener una representación lógica de la red, donde lo más importante no es la ubicación física, sino los nombres de estos y direcciones ip.</p>
+</div>
+<div class="openblock float-group">
+<div class="content">
+<div class="imageblock left">
+<div class="content">
+<img src="http://1.bp.blogspot.com/_jGWcwWrCUPY/St_e5JOnqEI/AAAAAAAADvA/6N_MlDoJBJo/s1600/topologiafisica.gif" alt="Topología física" width="500">
+</div>
+<div class="title">Figure 3. Topología física</div>
+</div>
+<div class="imageblock left">
+<div class="content">
+<img src="https://1.bp.blogspot.com/-WCDrM1dU43A/WEDqi87mb7I/AAAAAAAAdK8/sFJV4VF_OwsBQz4qSSXMDRUpXFwfpUdzgCLcB/s1600/2.PNG" alt="Topología lógica" width="380">
+</div>
+<div class="title">Figure 4. Topología lógica</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Redes en anillo</strong>: Aquellas en que los nodos formán una anillo. Disponen de una entrada y una salida, los conectores son de tipo T</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://i2.wp.com/s.culturacion.com/wp-content/uploads/2014/11/figura-2.png" alt="Token ring" width="200">
+</div>
+<div class="title">Figure 5. Red en anillo</div>
+</div>
+<div class="paragraph">
+<p><strong>Red en bus</strong>: Los nodos están conectados a un medio de comunicación común, la información puede ser vista por todos los nodos que comparten el medio. Un ejemplo de es red es la red inalámbrica.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Topologia_magistrali.svg/200px-Topologia_magistrali.svg.png" alt="Token Bus" width="200">
+</div>
+<div class="title">Figure 6. Red en bus</div>
+</div>
+<div class="paragraph">
+<p><strong>Red en estrella</strong>: Utiliza un elemento central para interconectar a todos los nodos</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://www.lifeder.com/wp-content/uploads/2019/10/Topolog%C3%ADa-en-estrella-Umapathy-CC-BY-SA-3.0-httpscreativecommons.orglicensesby-sa3.0.jpg" alt="Estrella" width="200">
+</div>
+<div class="title">Figure 7. Red en estrella</div>
+</div>
+<div class="paragraph">
+<p><strong>Red jerárquica/mixta</strong>: Es una extensión de las anteriores, puede utilizar combinaciones de estas.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://sites.google.com/site/smrtecnoredes/_/rsrc/1448653934338/topologia-arbol-jerarquica/arbol-massandra.jpg?height=246&width=400" alt="Jerárquica" width="200">
+</div>
+<div class="title">Figure 8. Red jerárquica</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interconexión_de_redes">6. Interconexión de redes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="direccionamiento_físico_y_ĺógico_en_la_red">Direccionamiento físico y ĺógico en la red</h3>
-<div id="__asciidoctor-preview-59__" class="paragraph">
+<h3 id="direccionamiento_físico_y_ĺógico_en_la_red">6.1. Direccionamiento físico y ĺógico en la red</h3>
+<div class="paragraph">
 <p>Para poder conectar un ordenador a una red, es necesario que este dispositivo disponga de una interfaz de red, la cual se identifica con la MAC que es única para cada tarjeta de red existente en el mundo.</p>
 </div>
-<div id="__asciidoctor-preview-60__" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="https://cdn.blogsdna.com/wp-content/uploads/2018/12/MAC-Media-Access-Control-Address-Format.jpg" alt="mac" width="500">
 </div>
 </div>
-<div id="__asciidoctor-preview-61__" class="admonitionblock tip">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">Tip</div>
 </td>
 <td class="content">
 La MAC es única en el mundo, un organismo regulador ha asignado a cada empresa fabricante un rango de MAC para sus productos.
@@ -707,72 +856,119 @@ La MAC es única en el mundo, un organismo regulador ha asignado a cada empresa 
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-62__" class="paragraph">
-<p><strong>Protocolo ARP</strong> El protocolo ARP se encarga de relacionar una dirección IP con una MAC o dirección física, ya que necesita esta última para comunicarse en la rede de área local.
+<div class="paragraph">
+<p><strong>Protocolo ARP</strong> El protocolo ARP se encarga de relacionar una dirección IP con una MAC o dirección física, ya que necesita esta última para comunicarse en la red de área local.
 La máquina que quiere saber la dirección MAC que tiene una cierta IP envía un paquete de tipo petición ARP (ARP request) a la dirección de multidifusión (FF:FF:FF:FF:FF:FF) y espera que la máquina que tiene la IP correspondiente le responda mediatne un (ARP response)
 TIP: Piensa cuando el profesor pasa lista por primera vez pues no conocer a los alumnos. Él tiene una lista de nombres que podrían ser dirección IP y para saber que nombre se corresponde con cada alumno, lo que hace es enviar un mensaje (nombrar al alumno en alto, seria ARP Request) de multidifusión (a toda la clase) y esperar a que el alumno con ese nombre levante la mano (ARP Response). El profesor asocia un nombre con una cara y así poder dirigirse al alumno con su nombre la próxima vez.</p>
 </div>
-<div id="__asciidoctor-preview-63__" class="olist Actividades">
+<div class="olist Actividades">
 <div class="title">Actividades</div>
 <ol class="Actividades" start="1">
-<li id="__asciidoctor-preview-64__">
+<li>
 <p>Utiliza el comando <code>ifconfig</code> en la terminal para conocer la MAC de tu equipo. Introduce la MAC en esta <a href="https://macvendors.com/">web</a> para obtener el fabricante.</p>
 </li>
-<li id="__asciidoctor-preview-65__">
+<li>
 <p>¿Cual es la MAC de tu móvil, y el fabricante?</p>
 </li>
-<li id="__asciidoctor-preview-66__">
+<li>
 <p>Utiliza en la terminal el comando <code>arp -a</code>  para ver con que dispositivos has establecido conexión en las últimas horas.</p>
 </li>
-<li id="__asciidoctor-preview-67__">
+<li>
 <p>Utiliza en la terminal el comando <code>ping <em>ip</em></code> para testear la comunicación con otros hosts dentro de la misma subred.</p>
-<div id="__asciidoctor-preview-68__" class="olist loweralpha">
+<div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li id="__asciidoctor-preview-69__">
+<li>
 <p>¿Qué le ocurre a la cache de macs accedidas recientemente?</p>
 </li>
-<li id="__asciidoctor-preview-70__">
-<p>¿Cuál es la MAC del host 10.1.0.254?</p>
+<li>
+<p>¿Cuál es la MAC del host 10.2.1.254?</p>
 </li>
-<li id="__asciidoctor-preview-71__">
-<p>¿Cuál es la MAC del host 10.0.1.120?, ¿Cómo lo has sabido?</p>
-</li>
-</ol>
-</div>
+<li>
+<p>¿Cuál es la MAC del host 192.168.80.11?, ¿Cómo lo has sabido?</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-72__" class="sidebarblock">
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Actividades</div>
+<ol class="arabic" start="1">
+<li>
+<p>Dibuja en <a href="https://app.diagrams.net/">draw.io</a> tu red doméstica, incluy en ella
+como elemento central el router y los dispositivos que se conectan, ordenadores,
+móviles, tablets, SmartTV, etc.</p>
+</li>
+<li>
+<p>Para cada una de ellos obtén la IP y la MAC</p>
+</li>
+<li>
+<p>Completa la siguiente tabla</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 75%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Dispositivo</th>
+<th class="tableblock halign-left valign-top">IP</th>
+<th class="tableblock halign-left valign-top">MAC</th>
+<th class="tableblock halign-left valign-top">Fabricante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>¿Qué sistema de numeración utiliza la MAC?, ¿Como lo has deducido?</p>
+</li>
+</ol>
+</div>
+<div class="sidebarblock">
 <div class="content">
 <div class="title">Actividad refuerzo</div>
-<div id="__asciidoctor-preview-73__" class="paragraph">
+<div class="paragraph">
 <p><strong>Objetivos</strong></p>
 </div>
-<div id="__asciidoctor-preview-74__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-75__">
+<li>
 <p>Comprender el funcionamiento del protocolo arp de aprendizaje de direcciones físicas(MAC) y el aprendizaje de
 la tabla de direcciones MAC en un switch a través de un juego.</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-76__" class="paragraph">
+<div class="paragraph">
 <p><strong>Material</strong></p>
 </div>
-<div id="__asciidoctor-preview-77__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-78__">
+<li>
 <p>Folios de color rojo para mensajes ARP Request</p>
 </li>
-<li id="__asciidoctor-preview-79__">
+<li>
 <p>Folios de color verde para mensajes ARP Response</p>
 </li>
-<li id="__asciidoctor-preview-80__">
+<li>
 <p>Folios de color blanco para las tablas MAC tanto de los hosts como del switch</p>
 </li>
 </ul>
 </div>
-<table id="__asciidoctor-preview-81__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 2. Formato ARP Request (folio verde)</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -795,7 +991,7 @@ la tabla de direcciones MAC en un switch a través de un juego.</p>
 </tr>
 </tbody>
 </table>
-<table id="__asciidoctor-preview-88__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 3. Formato ARP Response (folio rojo)</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -818,7 +1014,7 @@ la tabla de direcciones MAC en un switch a través de un juego.</p>
 </tr>
 </tbody>
 </table>
-<table id="__asciidoctor-preview-95__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 4. Formato Mensaje de texto (folio azul)</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -844,7 +1040,7 @@ la tabla de direcciones MAC en un switch a través de un juego.</p>
 </tr>
 </tbody>
 </table>
-<table id="__asciidoctor-preview-103__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 5. Formato cache arp host</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -863,7 +1059,7 @@ la tabla de direcciones MAC en un switch a través de un juego.</p>
 </tr>
 </tbody>
 </table>
-<table id="__asciidoctor-preview-108__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 6. Formato cache mac switch</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -884,14 +1080,91 @@ la tabla de direcciones MAC en un switch a través de un juego.</p>
 </table>
 </div>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Actividad. Packettracer-ARP</div>
+<div class="paragraph">
+<p><strong>Objetivos</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Aprender el manejo básico del programa de simulaciónde red Packettracer</p>
+</li>
+<li>
+<p>Asimilar el funcionamiento del protocolo de comunicación ARP</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Descripción</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Utiliza el programa pracettracer para crear un diagrama con los siguientes
+elementos</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Un elemento de intercomunicación (switch)</p>
+</li>
+<li>
+<p>4 hosts siguiendo la nomenclatura de la siguiente tabla</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 75%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Nombre host</th>
+<th class="tableblock halign-left valign-top">IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PC01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">192.168.30.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PC02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">192.168.30.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PC02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">192.168.30.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PC04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">192.168.30.4</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Utilizando el método de simulación, envía mensajes desde los cuatro
+hosts e inspecciona la tabla arp del switch para conocer la MAC de todos ellos.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="direccionamiento_lógico">Direccionamiento lógico.</h3>
-<div id="__asciidoctor-preview-113__" class="paragraph">
+<h3 id="direccionamiento_lógico">6.2. Direccionamiento lógico.</h3>
+<div class="paragraph">
 <p>La dirección IP es la responsable de que nuestra máquina pueda ser encontrada en la red. Esta dirección es única para cada ordenador dentro de la subred, en caso contrario entrarían en conflicto y ninguna de ellas podría recibir información.
 NOTE: La dirección IP esta formada por 32 bits en grupos de 8 bits.</p>
 </div>
-<table id="__asciidoctor-preview-114__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 7. Dirección IP en binario y decimal</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -910,11 +1183,11 @@ NOTE: La dirección IP esta formada por 32 bits en grupos de 8 bits.</p>
 </tr>
 </tbody>
 </table>
-<div id="__asciidoctor-preview-119__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 El valor máximo en decimal que puede tener cada octeto es de 255, equivalente en binario a 11111111
@@ -923,43 +1196,43 @@ El valor máximo en decimal que puede tener cada octeto es de 255, equivalente e
 </table>
 </div>
 <div class="sect3">
-<h4 id="clases_de_dirección_ipv4">Clases de dirección IPv4</h4>
-<div id="__asciidoctor-preview-120__" class="imageblock right">
+<h4 id="clases_de_dirección_ipv4">6.2.1. Clases de dirección IPv4</h4>
+<div class="imageblock right">
 <div class="content">
 <img src="http://redestelematicas.com/wp-content/uploads/2012/12/9.5.-Jerarquia-IPv4-1024x227.jpg" alt="mask" width="400">
 </div>
-<div class="title">Figure 3. Máscara de red</div>
+<div class="title">Figure 9. Máscara de red</div>
 </div>
-<div id="__asciidoctor-preview-121__" class="paragraph">
+<div class="paragraph">
 <p>La dirección IP es un número de 32 bits que identifica cada una de las máquinas que están conectadas a Internet o a cualquier red y también a la red a la que están conectadas. Una parte de la dirección IP según su máscara de red sirve para identificar la red, siendo el resto la dirección IP que identifica la máquina.</p>
 </div>
-<div id="__asciidoctor-preview-122__" class="paragraph">
+<div class="paragraph">
 <p>Para poder separa el campo que identifica a la red del campo que identifica al host, se tiene que aplicar la máscara de red, es decir aplicar la operación lógica AND entra la máscara de red y la dirección IP.</p>
 </div>
-<div id="__asciidoctor-preview-123__" class="literalblock">
+<div class="literalblock">
 <div class="content">
 <pre>192.168.2.23 = 11000000.10101000.00000010.00010111</pre>
 </div>
 </div>
-<div id="__asciidoctor-preview-124__" class="paragraph">
+<div class="paragraph">
 <p>La máscara de red es mucho más sencillo pues siempre será un conjunto de unos al principio que en algún punto cambiarán a cero.</p>
 </div>
-<div id="__asciidoctor-preview-125__" class="literalblock">
+<div class="literalblock">
 <div class="content">
 <pre>255.255.0.0  = 11111111.11111111.00000000.00000000</pre>
 </div>
 </div>
-<div id="__asciidoctor-preview-126__" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="https://interpolados.files.wordpress.com/2017/03/44.png?w=825" alt="mask-and" width="500">
 </div>
-<div class="title">Figure 4. Operación AND en dirección IP</div>
+<div class="title">Figure 10. Operación AND en dirección IP</div>
 </div>
-<div id="__asciidoctor-preview-127__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 Una operación lógica AND da como resultado 1 si ambos operandos son 1, 0 en cualquier otro caso.
@@ -967,7 +1240,7 @@ Una operación lógica AND da como resultado 1 si ambos operandos son 1, 0 en cu
 </tr>
 </table>
 </div>
-<table id="__asciidoctor-preview-128__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <caption class="title">Table 8. Valores posibles para la máscara de red</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -1018,61 +1291,61 @@ Una operación lógica AND da como resultado 1 si ambos operandos son 1, 0 en cu
 </tr>
 </tbody>
 </table>
-<div id="__asciidoctor-preview-149__" class="olist Actividades">
+<div class="olist Actividades">
 <div class="title">Actividades</div>
 <ol class="Actividades" start="1">
-<li id="__asciidoctor-preview-150__">
+<li>
 <p>¿Cuántos bits tiene una dirección IPv4?</p>
 </li>
-<li id="__asciidoctor-preview-151__">
+<li>
 <p>¿De cuantos bits está compuesta la máscara de red?</p>
 </li>
-<li id="__asciidoctor-preview-152__">
+<li>
 <p>¿Cuál es la dirección IP en binario de la siguiente en decimal 172.28.22.1?</p>
 </li>
-<li id="__asciidoctor-preview-153__">
+<li>
 <p>A partir de la siguiente dirección ip 10.0.2.45 y con máscara de red 255.255.0.0</p>
-<div id="__asciidoctor-preview-154__" class="olist loweralpha">
+<div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li id="__asciidoctor-preview-155__">
+<li>
 <p>¿Cuál es la dirección de red?</p>
 </li>
-<li id="__asciidoctor-preview-156__">
+<li>
 <p>¿Cuál es el identificador del host?</p>
 </li>
 </ol>
 </div>
 </li>
-<li id="__asciidoctor-preview-157__">
+<li>
 <p>Realiza el ejercicio anterior con la siguiente máscara 255.255.255.0</p>
 </li>
-<li id="__asciidoctor-preview-158__">
+<li>
 <p>¿Cuantos hosts pueden existir en una red cuya máscara es 255.255.255.0?, ¿y 255.255.0.0?</p>
 </li>
-<li id="__asciidoctor-preview-159__">
+<li>
 <p>Dada la siguiente red 192.168.2.70 y la máscara 255.255.255.0, determina la dirección de red y el identificador de host. Asigna 10 ip&#8217;s válidas a diez supuestos hosts.</p>
 </li>
-<li id="__asciidoctor-preview-160__">
+<li>
 <p>Repite el ejercicio anterior pero con siguiente máscara de red 255.255.0.0</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-161__" class="sidebarblock">
+<div class="sidebarblock">
 <div class="content">
 <div class="title">Actividad refuerzo</div>
-<div id="__asciidoctor-preview-162__" class="paragraph">
+<div class="paragraph">
 <p><strong>Objetivos</strong></p>
 </div>
-<div id="__asciidoctor-preview-163__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-164__">
+<li>
 <p>Reforzar el conocimiento y uso práctico de las máscaras de red aplicándolo a un uso cotidiano
 <strong>Desarrollo</strong>
 Imagina que las aulas del IES tienen un número mediante el cual podemos saber su ubicación y su máximo número de alumnos, el formato es el siguiente:</p>
 </li>
 </ul>
 </div>
-<table id="__asciidoctor-preview-165__" class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 9. Codificación aulas IES</caption>
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1094,21 +1367,21 @@ Imagina que las aulas del IES tienen un número mediante el cual podemos saber s
 </tr>
 </tbody>
 </table>
-<div id="__asciidoctor-preview-172__" class="paragraph">
+<div class="paragraph">
 <p>A partir del formato de aulas y el siguiente valor 0110010100</p>
 </div>
-<div id="__asciidoctor-preview-173__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-174__">
+<li>
 <p>¿Cuál es el número máximo permitido para dicha aula?</p>
 </li>
-<li id="__asciidoctor-preview-175__">
+<li>
 <p>¿En que planta y edificio está ubicada?</p>
 </li>
-<li id="__asciidoctor-preview-176__">
+<li>
 <p>¿Que máscara utilizaríamos para conocer la capacidad del aula?</p>
 </li>
-<li id="__asciidoctor-preview-177__">
+<li>
 <p>Según el código, ¿cuál es el número máximo de plantas que podríamos tener? ,¿y de alumnos?</p>
 </li>
 </ol>
@@ -1120,83 +1393,83 @@ Imagina que las aulas del IES tienen un número mediante el cual podemos saber s
 </div>
 </div>
 <div class="sect1">
-<h2 id="prácticas">Prácticas</h2>
+<h2 id="prácticas">7. Prácticas</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-178__" class="paragraph">
+<div class="paragraph">
 <p>Las siguientes prácticas las llevaremos a cabo utilizando el simulador de red <em>PacketTracer</em> que podéis descargar  <a href="https://www.netacad.com/portal/sites/default/files/resources/PacketTracer/packet_tracer_7.2.1_for_linux_64_bit.tar.gz">aquí</a>
  realiza las siguientes actividades.
 Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/install_packet_tracer_ubuntu_1804/">tutorial</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="práctica_1_conexión_directa_entre_dos_hosts">Práctica 1. Conexión directa entre dos hosts</h3>
-<div id="__asciidoctor-preview-179__" class="sidebarblock">
+<h3 id="práctica_1_conexión_directa_entre_dos_hosts">7.1. Práctica 1. Conexión directa entre dos hosts</h3>
+<div class="sidebarblock">
 <div class="content">
-<div id="__asciidoctor-preview-180__" class="paragraph">
+<div class="paragraph">
 <p><strong>Objetivo</strong></p>
 </div>
-<div id="__asciidoctor-preview-181__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-182__">
+<li>
 <p>Interconectar los hosts de forma directa con un cable cruzado.</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-183__" class="paragraph">
+<div class="paragraph">
 <p><strong>Desarrollo</strong></p>
 </div>
-<div id="__asciidoctor-preview-184__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-185__">
+<li>
 <p>Dibuja y conecta dos hosts de forma directa.</p>
 </li>
-<li id="__asciidoctor-preview-186__">
+<li>
 <p>Asigna ip&#8217;s válidas para dos hosts dentro de la red 192.168.10.0/24</p>
 </li>
-<li id="__asciidoctor-preview-187__">
+<li>
 <p>Utilizando el comando ping comprueba la conectividad</p>
 </li>
-<li id="__asciidoctor-preview-188__">
+<li>
 <p>Comprueba la cache arp de ambos hosts</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-189__" class="paragraph">
+<div class="paragraph">
 <p>image::xxxxxxxxxxxxxx</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="práctica_2_conexión_a_través_de_un_switch">Práctica 2. Conexión a través de un switch</h3>
-<div id="__asciidoctor-preview-190__" class="sidebarblock">
+<h3 id="práctica_2_conexión_a_través_de_un_switch">7.2. Práctica 2. Conexión a través de un switch</h3>
+<div class="sidebarblock">
 <div class="content">
-<div id="__asciidoctor-preview-191__" class="paragraph">
+<div class="paragraph">
 <p><strong>Objetivo</strong></p>
 </div>
-<div id="__asciidoctor-preview-192__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-193__">
+<li>
 <p>Interconectar los hosts entre sí mediante un switch</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-194__" class="paragraph">
+<div class="paragraph">
 <p><strong>Desarrollo</strong></p>
 </div>
-<div id="__asciidoctor-preview-195__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-196__">
+<li>
 <p>Dibuja y conecta 5 hosts a un switch.</p>
 </li>
-<li id="__asciidoctor-preview-197__">
+<li>
 <p>Asigna ip&#8217;s válidas para los hosts dentro de la red 192.168.10.0/24</p>
 </li>
-<li id="__asciidoctor-preview-198__">
+<li>
 <p>Utilizando el comando ping comprueba la conectividad</p>
 </li>
-<li id="__asciidoctor-preview-199__">
+<li>
 <p>Asigna a un host una ip no valida (de otra subred) y comprueba la conectividad</p>
-<div id="__asciidoctor-preview-200__" class="dlist">
+<div class="dlist">
 <dl>
 <dt class="hdlist1">image</dt>
 </dl>
@@ -1208,37 +1481,37 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 </div>
 <div class="sect2">
-<h3 id="práctica_3_interconexion_de_dos_switch">Práctica 3. interconexion de dos switch</h3>
-<div id="__asciidoctor-preview-202__" class="paragraph">
+<h3 id="práctica_3_interconexion_de_dos_switch">7.3. Práctica 3. interconexion de dos switch</h3>
+<div class="paragraph">
 <p>Supongamos, queremos interconectar dos aulas de 5 ordenadores cada una, entre estas hay una distancia de 30 metros, para ello utilizaremos dos switches, un por cada aula y luego los interconectaremos entre si.</p>
 </div>
-<div id="__asciidoctor-preview-203__" class="sidebarblock">
+<div class="sidebarblock">
 <div class="content">
-<div id="__asciidoctor-preview-204__" class="paragraph">
+<div class="paragraph">
 <p><strong>Objetivo</strong></p>
 </div>
-<div id="__asciidoctor-preview-205__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-206__">
+<li>
 <p>Interconectar dos switches</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-207__" class="paragraph">
+<div class="paragraph">
 <p><strong>Desarrollo</strong></p>
 </div>
-<div id="__asciidoctor-preview-208__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-209__">
+<li>
 <p>Dibuja y conecta 5 hosts a un switch correspondiente al aula 1</p>
 </li>
-<li id="__asciidoctor-preview-210__">
+<li>
 <p>Dibuja y conecta 5 hosts a un switch correspondiente al aula 2</p>
 </li>
-<li id="__asciidoctor-preview-211__">
+<li>
 <p>Interconecta los dos switches.</p>
 </li>
-<li id="__asciidoctor-preview-212__">
+<li>
 <p>Asigna ip&#8217;s válidas a los host dentro de la red 10.2.0.0/255.255.255.0</p>
 </li>
 </ol>
@@ -1247,11 +1520,11 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 </div>
 <div class="sect2">
-<h3 id="práctica_4_subredes_y_routers">Práctica 4. Subredes y routers</h3>
-<div id="__asciidoctor-preview-213__" class="paragraph">
+<h3 id="práctica_4_subredes_y_routers">7.4. Práctica 4. Subredes y routers</h3>
+<div class="paragraph">
 <p>Imaginemos que nos han encomendado realizar la configuración de red de un edificio con varias plantas, dos para simplificar, cada planta puede tener hasta un máximo de 255 ordenadores conectados. Para una mejor organización lógica y resolver posibles problemas en un futuro de forma eficiente. Vamos a hacer que cada planta este en una subred:</p>
 </div>
-<table id="__asciidoctor-preview-214__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1273,10 +1546,10 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </tr>
 </tbody>
 </table>
-<div id="__asciidoctor-preview-221__" class="paragraph">
+<div class="paragraph">
 <p>Completa la siguiente tabla con valores válidos para los siguientes hosts. Al Router por cuestiones prácticas se le suele asignar la primera ip de la subred.</p>
 </div>
-<table id="__asciidoctor-preview-222__" class="tableblock frame-all grid-all" style="width: 75%;">
+<table class="tableblock frame-all grid-all" style="width: 75%;">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1338,74 +1611,74 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </tr>
 </tbody>
 </table>
-<div id="__asciidoctor-preview-249__" class="paragraph">
+<div class="paragraph">
 <p>Es necesario el uso del router, ya que tenemos dos redes, la de la planta 1 y la de la planta 2 por lo que necesitamos un elemento de interconexión de redes, un router, que establezca las rutas entre estas dos redes diferentes.</p>
 </div>
-<div id="__asciidoctor-preview-250__" class="sidebarblock">
+<div class="sidebarblock">
 <div class="content">
-<div id="__asciidoctor-preview-251__" class="paragraph">
+<div class="paragraph">
 <p><strong>Objetivo</strong></p>
 </div>
-<div id="__asciidoctor-preview-252__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-253__">
+<li>
 <p>Interconectar dos redes mediante un routers</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-254__" class="paragraph">
+<div class="paragraph">
 <p><strong>Desarrollo</strong></p>
 </div>
-<div id="__asciidoctor-preview-255__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-256__">
+<li>
 <p>Dibuja y conecta 5 hosts al switch de la planta 1</p>
 </li>
-<li id="__asciidoctor-preview-257__">
+<li>
 <p>Dibuja y conecta 5 hosts al switch de la planta 2</p>
 </li>
-<li id="__asciidoctor-preview-258__">
+<li>
 <p>Asigna la ip a las interfaces del rotuter segun la tabla</p>
 </li>
-<li id="__asciidoctor-preview-259__">
+<li>
 <p>Asigna ip&#8217;s válidas a los host segun la tabla completada asignando como puerta de enlace la correspondiente del router.</p>
 </li>
-<li id="__asciidoctor-preview-260__">
+<li>
 <p>Comprueba la interconectividad entre los diferentes hosts.</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-261__" class="paragraph">
+<div class="paragraph">
 <p><strong>Questiones</strong></p>
 </div>
-<div id="__asciidoctor-preview-262__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-263__">
+<li>
 <p>¿Por qué es necesario el uso del router para que los ordenadores de la planta 1 puedan comunicarse con los de la planta 2?</p>
 </li>
-<li id="__asciidoctor-preview-264__">
+<li>
 <p>¿Por qué es necesario configurar los hosts con la puerta de enlace?.</p>
 </li>
-<li id="__asciidoctor-preview-265__">
+<li>
 <p>¿Que ocurriría si configuramos los hosts con una puerta de enlace errónea o la dejamos sin configurar?</p>
 </li>
-<li id="__asciidoctor-preview-266__">
+<li>
 <p>En el caso anterior, es decir, hemos configurado o dejado sin configurar el campo puerta de enlace en los hosts:</p>
-<div id="__asciidoctor-preview-267__" class="olist loweralpha">
+<div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li id="__asciidoctor-preview-268__">
+<li>
 <p>¿Podríamos comunicarnos con los ordenadores de la misma red?</p>
 </li>
-<li id="__asciidoctor-preview-269__">
+<li>
 <p>¿Podríamos comunicarnos con los ordenadores de diferente red?.</p>
 </li>
-<li id="__asciidoctor-preview-270__">
+<li>
 <p>Razona tu respuesta en ambos casos</p>
 </li>
 </ol>
 </div>
 </li>
-<li id="__asciidoctor-preview-271__">
+<li>
 <p>¿Para que sirve el campo puerta de enlace?</p>
 </li>
 </ol>
@@ -1415,7 +1688,11 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 </div>
 </div>
-        </div>
-      </div>
-    </body>
-  </html>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-09-22 09:18:20 +0200
+</div>
+</div>
+</body>
+</html>
