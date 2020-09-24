@@ -456,24 +456,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#clasificación_de_las_redes">3. Clasificación de las redes</a>
 <ul class="sectlevel2">
 <li><a href="#extensión_geográfica">3.1. Extensión geográfica</a></li>
-<li><a href="#redes_de_área_metropolitanaman">3.2. Redes de área metropolitana(MAN)</a></li>
-<li><a href="#redes_de_área_exensawan">3.3. Redes de área exensa(WAN)</a></li>
+<li><a href="#clienteservidor_o_de_iguales">3.2. Cliente/servidor o de iguales</a></li>
+<li><a href="#topología">3.3. Topología</a></li>
 </ul>
 </li>
-<li><a href="#clienteservidor_o_de_iguales">4. Cliente/servidor o de iguales</a></li>
-<li><a href="#topología">5. Topología</a></li>
-<li><a href="#interconexión_de_redes">6. Interconexión de redes</a>
+<li><a href="#interconexión_de_redes">4. Interconexión de redes</a>
 <ul class="sectlevel2">
-<li><a href="#direccionamiento_físico_y_ĺógico_en_la_red">6.1. Direccionamiento físico y ĺógico en la red</a></li>
-<li><a href="#direccionamiento_lógico">6.2. Direccionamiento lógico.</a></li>
+<li><a href="#direccionamiento_físico_y_ĺógico_en_la_red">4.1. Direccionamiento físico y ĺógico en la red</a></li>
+<li><a href="#direccionamiento_lógico">4.2. Direccionamiento lógico.</a></li>
 </ul>
 </li>
-<li><a href="#prácticas">7. Prácticas</a>
+<li><a href="#prácticas">5. Prácticas</a>
 <ul class="sectlevel2">
-<li><a href="#práctica_1_conexión_directa_entre_dos_hosts">7.1. Práctica 1. Conexión directa entre dos hosts</a></li>
-<li><a href="#práctica_2_conexión_a_través_de_un_switch">7.2. Práctica 2. Conexión a través de un switch</a></li>
-<li><a href="#práctica_3_interconexion_de_dos_switch">7.3. Práctica 3. interconexion de dos switch</a></li>
-<li><a href="#práctica_4_subredes_y_routers">7.4. Práctica 4. Subredes y routers</a></li>
+<li><a href="#práctica_1_conexión_directa_entre_dos_hosts">5.1. Práctica 1. Conexión directa entre dos hosts</a></li>
+<li><a href="#práctica_2_conexión_a_través_de_un_switch">5.2. Práctica 2. Conexión a través de un switch</a></li>
+<li><a href="#práctica_3_interconexion_de_dos_switch">5.3. Práctica 3. interconexion de dos switch</a></li>
+<li><a href="#práctica_4_subredes_y_routers">5.4. Práctica 4. Subredes y routers</a></li>
 </ul>
 </li>
 </ul>
@@ -709,7 +707,7 @@ Los dispositivos de red  tambien se encargan de:</p>
 <h2 id="clasificación_de_las_redes">3. Clasificación de las redes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Las redes de computadres se crean para interconectar ordenadores. Podemas clasificar a estas en función de:</p>
+<p>Las redes de computadres se crean para interconectar ordenadores. Podemos clasificar a estas en función de:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -745,37 +743,32 @@ Los dispositivos de red  tambien se encargan de:</p>
 <p>Las LAN están diseñadas para conectar todos los dispositivos, impresoras, servidores, clientes, cámaras, etc. dentro de un edificio. Las tenemos en nuestra casa, lugar de trabajo, biblioteca, instituto, etc.</p>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="redes_de_área_metropolitanaman">3.2. Redes de área metropolitana(MAN)</h3>
+<div class="sect3">
+<h4 id="redes_de_área_metropolitanaman">3.1.2. Redes de área metropolitana(MAN)</h4>
 <div class="paragraph">
 <p>Creadas a partir de la necesidad de conectar diferentes edificios de una empresa/entidad académica/institución pública dentro de una misma ciudad</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="redes_de_área_extensa_wan">3.1.3. Redes de área extensa (WAN)</h4>
+<div class="paragraph">
+<p>Las redes de área extensa normalmente utilizan lineas de transmisión en muchos casos propiedad de compañías telefónicas. Estás líneas son compartidas por muchos usuarios. Estás abarcan países y continentes.</p>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="redes_de_área_exensawan">3.3. Redes de área exensa(WAN)</h3>
+<h3 id="clienteservidor_o_de_iguales">3.2. Cliente/servidor o de iguales</h3>
 <div class="paragraph">
-<p>Las redes de área extensa normalmente utilizan lineas de trasnmisión en muchos casos propiedad de compañías telefónicas. Estás líneas son compartidas por muchos usuarios. Estás abarcan paises y continentes.</p>
+<p>Una red cliente-servidor es aquella en el que todos los clientes están conectados a un servidor donde se centralizan todos los recursos (servidor web,servidor de correo electrónico, servidor de streaming, servidor de mensajería instantánea,etc.)
+Una red entre iguales es aquella en el que todos los integrantes de la rea actúan solicitando y atendiendo peticiones (redes p2p). Son redes sencillas de llevar a cabo que conectan un número limitado de máquinas. Su escalabilidad es limitada.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="clienteservidor_o_de_iguales">4. Cliente/servidor o de iguales</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Una red cliente-servidor es aquell en el que todos los clientes están conectados a un servidor donde se centralizan todos los recursos (servidor web,servidor de correo electónico, servidor de streaming, servidor de mensajería instantánea,etc.)
-Una red entre iguales es aquella en el que todos los integrantes de la rea actuán solicitando y atendiendo peticiones (redes p2p). Son redes sencillas de llevar a cabo que conectan un número limitado de máquinas. Su escalabilidad es limitada.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="topología">5. Topología</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="topología">3.3. Topología</h3>
 <div class="paragraph">
 <p>Una red sencilla formada por un número reducido de ordenadores, es sencilla de visualizar. A medida que esta crece es necesario crear un mapa topológico donde registramos la ubicación de cada ordenador y como está contectado a la red.
 El mapa de topología física tambien muestra por donde pasan los cables y las ubicaciones de los dispositivos de red que conectan los ordenadores. Estos mapas son muy importantes a la hora de detectar y solucionar problemas.
-Tambien es interesante tener una representación lógica de la red, donde lo más importante no es la ubicación física, sino los nombres de estos y direcciones ip.</p>
+También es interesante tener una representación lógica de la red, donde lo más importante no es la ubicación física, sino los nombres de estos y direcciones ip.</p>
 </div>
 <div class="openblock float-group">
 <div class="content">
@@ -794,7 +787,7 @@ Tambien es interesante tener una representación lógica de la red, donde lo má
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Redes en anillo</strong>: Aquellas en que los nodos formán una anillo. Disponen de una entrada y una salida, los conectores son de tipo T</p>
+<p><strong>Redes en anillo</strong>: Aquellas en que los nodos forman una anillo. Disponen de una entrada y una salida, los conectores son de tipo T</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -831,11 +824,12 @@ Tambien es interesante tener una representación lógica de la red, donde lo má
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="interconexión_de_redes">6. Interconexión de redes</h2>
+<h2 id="interconexión_de_redes">4. Interconexión de redes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="direccionamiento_físico_y_ĺógico_en_la_red">6.1. Direccionamiento físico y ĺógico en la red</h3>
+<h3 id="direccionamiento_físico_y_ĺógico_en_la_red">4.1. Direccionamiento físico y ĺógico en la red</h3>
 <div class="paragraph">
 <p>Para poder conectar un ordenador a una red, es necesario que este dispositivo disponga de una interfaz de red, la cual se identifica con la MAC que es única para cada tarjeta de red existente en el mundo.</p>
 </div>
@@ -1159,7 +1153,7 @@ hosts e inspecciona la tabla arp del switch para conocer la MAC de todos ellos.<
 </div>
 </div>
 <div class="sect2">
-<h3 id="direccionamiento_lógico">6.2. Direccionamiento lógico.</h3>
+<h3 id="direccionamiento_lógico">4.2. Direccionamiento lógico.</h3>
 <div class="paragraph">
 <p>La dirección IP es la responsable de que nuestra máquina pueda ser encontrada en la red. Esta dirección es única para cada ordenador dentro de la subred, en caso contrario entrarían en conflicto y ninguna de ellas podría recibir información.
 NOTE: La dirección IP esta formada por 32 bits en grupos de 8 bits.</p>
@@ -1196,7 +1190,7 @@ El valor máximo en decimal que puede tener cada octeto es de 255, equivalente e
 </table>
 </div>
 <div class="sect3">
-<h4 id="clases_de_dirección_ipv4">6.2.1. Clases de dirección IPv4</h4>
+<h4 id="clases_de_dirección_ipv4">4.2.1. Clases de dirección IPv4</h4>
 <div class="imageblock right">
 <div class="content">
 <img src="http://redestelematicas.com/wp-content/uploads/2012/12/9.5.-Jerarquia-IPv4-1024x227.jpg" alt="mask" width="400">
@@ -1393,7 +1387,7 @@ Imagina que las aulas del IES tienen un número mediante el cual podemos saber s
 </div>
 </div>
 <div class="sect1">
-<h2 id="prácticas">7. Prácticas</h2>
+<h2 id="prácticas">5. Prácticas</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Las siguientes prácticas las llevaremos a cabo utilizando el simulador de red <em>PacketTracer</em> que podéis descargar  <a href="https://www.netacad.com/portal/sites/default/files/resources/PacketTracer/packet_tracer_7.2.1_for_linux_64_bit.tar.gz">aquí</a>
@@ -1401,7 +1395,7 @@ Imagina que las aulas del IES tienen un número mediante el cual podemos saber s
 Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/install_packet_tracer_ubuntu_1804/">tutorial</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="práctica_1_conexión_directa_entre_dos_hosts">7.1. Práctica 1. Conexión directa entre dos hosts</h3>
+<h3 id="práctica_1_conexión_directa_entre_dos_hosts">5.1. Práctica 1. Conexión directa entre dos hosts</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -1440,7 +1434,7 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 </div>
 <div class="sect2">
-<h3 id="práctica_2_conexión_a_través_de_un_switch">7.2. Práctica 2. Conexión a través de un switch</h3>
+<h3 id="práctica_2_conexión_a_través_de_un_switch">5.2. Práctica 2. Conexión a través de un switch</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -1481,7 +1475,7 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 </div>
 <div class="sect2">
-<h3 id="práctica_3_interconexion_de_dos_switch">7.3. Práctica 3. interconexion de dos switch</h3>
+<h3 id="práctica_3_interconexion_de_dos_switch">5.3. Práctica 3. interconexion de dos switch</h3>
 <div class="paragraph">
 <p>Supongamos, queremos interconectar dos aulas de 5 ordenadores cada una, entre estas hay una distancia de 30 metros, para ello utilizaremos dos switches, un por cada aula y luego los interconectaremos entre si.</p>
 </div>
@@ -1520,7 +1514,7 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 </div>
 <div class="sect2">
-<h3 id="práctica_4_subredes_y_routers">7.4. Práctica 4. Subredes y routers</h3>
+<h3 id="práctica_4_subredes_y_routers">5.4. Práctica 4. Subredes y routers</h3>
 <div class="paragraph">
 <p>Imaginemos que nos han encomendado realizar la configuración de red de un edificio con varias plantas, dos para simplificar, cada planta puede tener hasta un máximo de 255 ordenadores conectados. Para una mejor organización lógica y resolver posibles problemas en un futuro de forma eficiente. Vamos a hacer que cada planta este en una subred:</p>
 </div>
@@ -1691,7 +1685,7 @@ Podéis seguir los pasos de instalación en este <a href="https://linuxhint.com/
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-22 09:18:20 +0200
+Last updated 2020-09-24 12:52:52 +0200
 </div>
 </div>
 </body>
