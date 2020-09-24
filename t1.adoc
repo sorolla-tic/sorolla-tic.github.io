@@ -208,6 +208,7 @@ TIP: La MAC es única en el mundo, un organismo regulador ha asignado a cada emp
 
 *Protocolo ARP* El protocolo ARP se encarga de relacionar una dirección IP con una MAC o dirección física, ya que necesita esta última para comunicarse en la red de área local.
 La máquina que quiere saber la dirección MAC que tiene una cierta IP envía un paquete de tipo petición ARP (ARP request) a la dirección de multidifusión (FF:FF:FF:FF:FF:FF) y espera que la máquina que tiene la IP correspondiente le responda mediatne un (ARP response)
+
 TIP: Piensa cuando el profesor pasa lista por primera vez pues no conocer a los alumnos. Él tiene una lista de nombres que podrían ser dirección IP y para saber que nombre se corresponde con cada alumno, lo que hace es enviar un mensaje (nombrar al alumno en alto, seria ARP Request) de multidifusión (a toda la clase) y esperar a que el alumno con ese nombre levante la mano (ARP Response). El profesor asocia un nombre con una cara y así poder dirigirse al alumno con su nombre la próxima vez.
 
 
